@@ -14,8 +14,17 @@ class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
 end
 
+class Lead < ActiveRecord::Base
+  self.table_name = 'salesforce.lead'
+end
+
 get "/contacts" do
   @contacts = Contact.all
+  erb :index
+end
+
+get "/leads" do
+  @leads = Lead.all
   erb :index
 end
 
