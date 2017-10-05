@@ -24,7 +24,7 @@ get "/contacts" do
 end
 
 get "/leads" do
-  @leads = Lead.all
+  @contacts = Lead.all
   erb :index
 end
 
