@@ -28,6 +28,12 @@ get "/leads" do
   erb :index
 end
 
+get "/add" do
+  Lead.create(:firstname => 'test', :lastname => 'taro', :email => 'taro@test.com')
+  @contacts = Lead.all
+  erb :index
+end
+
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
   match = /(.*?)\.herokuapp\.com/.match(request.host)
