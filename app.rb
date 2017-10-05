@@ -29,7 +29,7 @@ get "/leads" do
 end
 
 get "/add" do
-  Lead.create(:Company => 'salesforce', :firstname => 'test', :lastname => 'taro', :email => 'taro@test.com')
+  Lead.create(:company => 'salesforce', :firstname => 'test', :lastname => 'taro', :email => 'taro@test.com')
   @contacts = Lead.all
   erb :index
 end
