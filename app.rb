@@ -6,7 +6,8 @@ require './environments'
 
 
 get "/" do
-  erb :home
+  @contacts = Lead.all
+  erb :index
 end
 
 
